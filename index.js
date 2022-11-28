@@ -45,11 +45,11 @@ async function run() {
         
 
         
-        // app.post('/productAdd', async (req, res) => {
-        //     const review = req.body;
-        //     const result = await allCarCollection.insertOne(review);
-        //     res.send(result)
-        // })
+        app.post('/productAdd', async (req, res) => {
+            const review = req.body;
+            const result = await allCarCollection.insertOne(review);
+            res.send(result)
+        })
 
 
         // app.get('/cetegories/:id', async (req, res) => {
