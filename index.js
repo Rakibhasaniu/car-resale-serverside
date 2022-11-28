@@ -20,17 +20,17 @@ async function verifyJWT(req, res, next) {
         return res.status(401).send('This parson unAthorizetion access')
     }
 
-//     const token = authHeder.split(' ')[1];
-//     jwt.verify(token, process.env.ACCSS_TOKEN, function (err, decoded) {
-//         if (err) {
-//             return res.status(402).send({ message: "forbiden access" })
-//         }
+    const token = authHeder.split(' ')[1];
+    jwt.verify(token, process.env.ACCSS_TOKEN, function (err, decoded) {
+        if (err) {
+            return res.status(402).send({ message: "forbiden access" })
+        }
 
-//         req.decoded = decoded;
-//         next()
-//     })
+        req.decoded = decoded;
+        next()
+    })
 
-// }
+}
 
 // async function run() {
 
