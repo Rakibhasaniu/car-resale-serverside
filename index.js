@@ -82,11 +82,11 @@ async function run() {
         })
 
         
-        // app.post('/advertic', async (req, res) => {
-        //     const boking = req.body;
-        //     const result = await adverticCollection.insertOne(boking);
-        //     res.send(result);
-        // })
+        app.post('/advertic', async (req, res) => {
+            const boking = req.body;
+            const result = await adverticCollection.insertOne(boking);
+            res.send(result);
+        })
 
        
         // app.get('/advertic/:email', async (req, res) => {
