@@ -105,60 +105,60 @@ async function run() {
         })
 
        
-        // app.get('/bookings', async (req, res) => {
-        //     const query = {};
-        //     const result = await BookingCar.find(query).toArray();
-        //     res.send(result);
-        // })
+        app.get('/bookings', async (req, res) => {
+            const query = {};
+            const result = await BookingCar.find(query).toArray();
+            res.send(result);
+        })
 
-        // app.post('/users', async (req, res) => {
-        //     const users = req.body;
-        //     const result = await AllUser.insertOne(users);
-        //     res.send(result);
-        // })
-
-       
-        // app.get('/users', async (req, res) => {
-        //     const query = {};
-        //     const result = await AllUser.find(query).toArray();
-        //     res.send(result)
-        // })
-
+        app.post('/users', async (req, res) => {
+            const users = req.body;
+            const result = await AllUser.insertOne(users);
+            res.send(result);
+        })
 
        
-        // app.get('/users/:email', async (req, res) => {
-        //     const email = req.params.email;
+        app.get('/users', async (req, res) => {
+            const query = {};
+            const result = await AllUser.find(query).toArray();
+            res.send(result)
+        })
+
+
+       
+        app.get('/users/:email', async (req, res) => {
+            const email = req.params.email;
             
-        //     const query = { email: email };
-        //     const result = await AllUser.find(query).toArray();
-        //     res.send(result)
-        // })
+            const query = { email: email };
+            const result = await AllUser.find(query).toArray();
+            res.send(result)
+        })
 
         
-//         app.get('/jwt', async (req, res) => {
-//             const email = req.query.email;
-//             const query = { email: email };
-//             const user = await AllUser.findOne(query);
-//             if (user) {
-//                 const token = jwt.sign({ email }, process.env.ACCSS_TOKEN, { expiresIn: '1h' });
-//                 return res.send({ accessToken: token })
-//             }
-//             console.log(user);
-//             res.status(403).send({ accessToken: '' })
-//         })
+        app.get('/jwt', async (req, res) => {
+            const email = req.query.email;
+            const query = { email: email };
+            const user = await AllUser.findOne(query);
+            if (user) {
+                const token = jwt.sign({ email }, process.env.ACCSS_TOKEN, { expiresIn: '1h' });
+                return res.send({ accessToken: token })
+            }
+            console.log(user);
+            res.status(403).send({ accessToken: '' })
+        })
 
 
-//     }
-//     catch (error) {
-//         console.log(error.name, error.message, error.stack);
-//     }
+    }
+    catch (error) {
+        console.log(error.name, error.message, error.stack);
+    }
 
-// }
+}
 
-// run().catch(error => console.log(error))
+run().catch(error => console.log(error))
 
 
-// app.get('/', (req, res) => {
-//     res.send('Cars Resell.shop is Runings')
-// })
-// app.listen(port, () => console.log(`Cars Resell.shop is Runing is ${port}`))
+app.get('/', (req, res) => {
+    res.send('Cars Resell.shop is Runings')
+})
+app.listen(port, () => console.log(`Cars Resell.shop is Runing is ${port}`))
