@@ -52,13 +52,13 @@ async function run() {
         })
 
 
-        // app.get('/cetegories/:id', async (req, res) => {
-        //     const product = req.params.id;
-        //     const query = { id: product };
-        //     const result = await allCarCollection.find(query).toArray();
-        //     res.send(result);
+        app.get('/cetegories/:id', async (req, res) => {
+            const product = req.params.id;
+            const query = { id: product };
+            const result = await allCarCollection.find(query).toArray();
+            res.send(result);
 
-        // })
+        })
 
    
         // app.get('/allProduct', async (req, res) => {
