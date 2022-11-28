@@ -4,10 +4,10 @@ const { MongoClient, ServerApiVersion } = require('mongodb');
 const jwt = require('jsonwebtoken');
 const port = process.env.PORT || 5000;
 
-// const app = express();
-// require('dotenv').config();
-// app.use(cors());
-// app.use(express.json())
+const app = express();
+require('dotenv').config();
+app.use(cors());
+app.use(express.json())
 
 
 // const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@rasel-01.uhpxwkk.mongodb.net/?retryWrites=true&w=majority`;
