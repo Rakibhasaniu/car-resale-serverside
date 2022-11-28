@@ -42,11 +42,7 @@ async function run() {
         const adverticCollection = client.db('Car-Shop_Datas').collection('All-Advertic');
 
        
-        // app.get('/cetegories', async (req, res) => {
-        //     const query = {};
-        //     const result = await CetegoriesCars.find(query).toArray();
-        //     res.send(result);
-        // })
+        
 
         
         // app.post('/productAdd', async (req, res) => {
