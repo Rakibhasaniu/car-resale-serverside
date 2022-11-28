@@ -67,19 +67,19 @@ async function run() {
             res.send(result)
         })
 
-        // app.get('/allProduct/:email', async (req, res) => {
-        //     const user = req.params.email
-        //     const query = { email: user };
-        //     const result = await allCarCollection.find(query).toArray();
-        //     res.send(result)
-        // })
+        app.get('/allProduct/:email', async (req, res) => {
+            const user = req.params.email
+            const query = { email: user };
+            const result = await allCarCollection.find(query).toArray();
+            res.send(result)
+        })
 
       
-        // app.post('/booking', async (req, res) => {
-        //     const boking = req.body;
-        //     const result = await BookingCar.insertOne(boking);
-        //     res.send(result);
-        // })
+        app.post('/booking', async (req, res) => {
+            const boking = req.body;
+            const result = await BookingCar.insertOne(boking);
+            res.send(result);
+        })
 
         
         // app.post('/advertic', async (req, res) => {
