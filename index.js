@@ -32,14 +32,14 @@ async function verifyJWT(req, res, next) {
 
 }
 
-// async function run() {
+async function run() {
 
-//     try {
-//         const CetegoriesCars = client.db('Car-Shop_Datas').collection('Categories_Cars');
-//         const allCarCollection = client.db('Car-Shop_Datas').collection('All-Products');
-//         const BookingCar = client.db('Car-Shop_Datas').collection('BookingCar');
-//         const AllUser = client.db('Car-Shop_Datas').collection('All-Users');
-//         const adverticCollection = client.db('Car-Shop_Datas').collection('All-Advertic');
+    try {
+        const CetegoriesCars = client.db('Car-Shop_Datas').collection('Categories_Cars');
+        const allCarCollection = client.db('Car-Shop_Datas').collection('All-Products');
+        const BookingCar = client.db('Car-Shop_Datas').collection('BookingCar');
+        const AllUser = client.db('Car-Shop_Datas').collection('All-Users');
+        const adverticCollection = client.db('Car-Shop_Datas').collection('All-Advertic');
 
        
         // app.get('/cetegories', async (req, res) => {
