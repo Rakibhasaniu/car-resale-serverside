@@ -97,12 +97,12 @@ async function run() {
         })
         
 
-        // app.get('/bookings/:email', async (req, res) => {
-        //     const email = req.params.email;
-        //     const query = { email: email };
-        //     const result = await BookingCar.find(query).toArray();
-        //     res.send(result);
-        // })
+        app.get('/bookings/:email', async (req, res) => {
+            const email = req.params.email;
+            const query = { email: email };
+            const result = await BookingCar.find(query).toArray();
+            res.send(result);
+        })
 
        
         // app.get('/bookings', async (req, res) => {
